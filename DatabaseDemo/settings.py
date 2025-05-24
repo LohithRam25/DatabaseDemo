@@ -14,7 +14,9 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+from environ import Env
+env=Env()
+env.read_env("D:\\Advance Projects\\Django Projects\\DatabaseDemo\\.env")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -76,10 +78,10 @@ WSGI_APPLICATION = 'DatabaseDemo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Production',
-        'USER':'postgres',
-        'PASSWORD':'Pkalyanram143*'
+        'ENGINE': env('ENGINE'),
+        'NAME': env('NAME'),
+        'USER':env('USER'),
+        'PASSWORD':env('PASSWORD')
     }
 }
 
