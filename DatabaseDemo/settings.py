@@ -81,7 +81,8 @@ DATABASES = {
         'ENGINE': env('ENGINE'),
         'NAME': env('NAME'),
         'USER':env('USER'),
-        'PASSWORD':env('PASSWORD')
+        'PASSWORD':env('PASSWORD'),
+        'PORT': env('PORT')
     }
 }
 
