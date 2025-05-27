@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["databasedemo-production.up.railway.app"]
 
-
+ALLOWED_ORIGINS=["databasedemo-production.up.railway.app/*"]
 # Application definition
 
 INSTALLED_APPS = [
